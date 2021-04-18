@@ -1,7 +1,7 @@
 namespace: joellefkowitz
-name: swarmroles
-description: Roles for deploying a docker swarm
-version: 1.4.0
+name: swarmroles-support
+description: Add on roles for deploying a docker swarm
+version: 0.1.0
 
 readme: README.md
 authors:
@@ -13,8 +13,8 @@ license:
 tags: []
 dependencies: {}
 
-repository: &repo https://github.com/JoelLefkowitz/swarmroles
-issues: https://github.com/JoelLefkowitz/swarmroles/issues
+repository: &repo https://github.com/JoelLefkowitz/swarmroles-support
+issues: https://github.com/JoelLefkowitz/swarmroles-support/issues
 
 homepage: *repo
 documentation: *repo

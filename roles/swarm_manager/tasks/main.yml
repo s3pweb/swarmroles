@@ -1,5 +1,23 @@
 - name: Join swarm
   include_tasks: join.yml
 
+<<<<<<< HEAD
 - name: Pull images
   include_tasks: pull.yml
+=======
+- name: Log into DockerHub
+  community.docker.docker_login:
+    username: "{{ docker_username }}"
+    password: "{{ lookup('env', 'DOCKER_ACCESS_TOKEN') }}"
+  register: result
+  when: docker_username is defined
+
+# Force pull newer version of an image tag
+- name: Pull images
+  community.docker.docker_image:
+    name: "{{ item }}"
+    source: pull
+    force_source: yes
+  loop: "{{ pull_images }}"
+  when: pull_images is defined
+>>>>>>> cfe2fe28cd9f2be6301bf76b09606c71593d4765
