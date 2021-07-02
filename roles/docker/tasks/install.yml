@@ -1,6 +1,6 @@
 - name: Register Docker GPG
   apt_key:
-    url: https://download.docker.com/linux/"{{ os }}"/gpg
+    url: https://download.docker.com/linux/{{ os }}/gpg
     state: present
 
 - name: Register Docker Repository
